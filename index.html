@@ -121,7 +121,7 @@
     <!-- ==================== 한국어 버전 ==================== -->
     <div id="section-ko" class="section-ko">
       <h1>개인정보처리방침</h1>
-      <p class="subtitle">한자마스터(HanjaMaster) | 시행일: 2026년 3월 25일 | 최종 수정일: 2026년 9월 20일 | 버전 1.2</p>
+      <p class="subtitle">한자마스터(HanjaMaster) | 시행일: 2026년 3월 25일 | 최종 수정일: 2026년 10월 4일 | 버전 1.3 (iOS 항목 추가 초안)</p>
 
       <div class="highlight">
         <strong>개정 안내(2026년 9월 20일 공지):</strong> 광고 수익 개선을 위해 <strong>Meta Audience Network</strong>를 AdMob 미디에이션 광고 파트너로 추가했습니다. 이에 따라 제1조·제2조·제3조·제5조가 개정되었으며, 개정 내용은 제8조에 따라 공지 후 7일이 경과한 <strong>2026년 9월 27일부터</strong> 효력이 발생합니다.
@@ -152,6 +152,16 @@
             <td>Google AdMob</td>
           </tr>
           <tr>
+            <td>광고 식별자(IDFA, iOS에서 추적을 허용한 경우에만 사용)</td>
+            <td>맞춤형 광고 제공</td>
+            <td>Google AdMob</td>
+          </tr>
+          <tr>
+            <td>인앱 결제 구입 내역(상품, 구입 일시, 거래 식별자)</td>
+            <td>이용권 지급 및 구매 확인</td>
+            <td>Apple(App Store) / Google Play</td>
+          </tr>
+          <tr>
             <td>광고 식별자(AAID), IP 주소, 기기 정보, 광고 상호작용 데이터</td>
             <td>광고 게재 및 성과 측정(AdMob 미디에이션)</td>
             <td>Meta Audience Network (Meta Platforms)</td>
@@ -174,8 +184,8 @@
         </tbody>
       </table>
 
-      <h3>2. 선택적 계정 동기화(구글 로그인)</h3>
-      <p>설정 화면에서 <strong>구글 계정으로 로그인</strong>하면, 학습 진도와 환경 설정을 다른 기기와 동기화할 수 있습니다. <strong>로그인하지 않으면 이 항은 적용되지 않으며</strong>, 앱은 계정 없이 이 기기에만 데이터를 저장한 채로 동작합니다.</p>
+      <h3>2. 선택적 계정 동기화(구글 로그인 또는 Apple 로그인)</h3>
+      <p>설정 화면에서 <strong>구글 계정 또는 Apple 계정으로 로그인</strong>하면, 학습 진도와 환경 설정을 다른 기기와 동기화할 수 있습니다. <strong>로그인하지 않으면 이 항은 적용되지 않으며</strong>, 앱은 계정 없이 이 기기에만 데이터를 저장한 채로 동작합니다.</p>
       <table>
         <thead>
           <tr>
@@ -189,6 +199,11 @@
             <td>이메일 주소, 구글 계정 식별자(UID)</td>
             <td>로그인 계정 식별, 기기 간 데이터 연결</td>
             <td>Google Firebase Authentication</td>
+          </tr>
+          <tr>
+            <td>Apple 로그인 이메일 주소(이메일 가리기를 쓴 경우 Apple이 제공하는 중계 주소), Apple 사용자 식별자</td>
+            <td>로그인 계정 식별, 기기 간 데이터 연결</td>
+            <td>Google Firebase Authentication(Apple 로그인 연동)</td>
           </tr>
           <tr>
             <td>학습 진도(플래시카드 상태, 즐겨찾기, 퍼즐 기록, 일별 학습 요약)</td>
@@ -271,6 +286,12 @@
             <td><a href="https://firebase.google.com/support/privacy" target="_blank">링크</a></td>
           </tr>
           <tr>
+            <td>Apple(App Store 인앱 결제, Apple 로그인)</td>
+            <td>Apple Inc.</td>
+            <td>이용권 구매 처리, 선택적 Apple 로그인</td>
+            <td><a href="https://www.apple.com/legal/privacy/" target="_blank">링크</a></td>
+          </tr>
+          <tr>
             <td>Firebase Firestore</td>
             <td>Google LLC</td>
             <td>선택적 학습 진도·설정 동기화</td>
@@ -291,11 +312,14 @@
       <h2>제5조 (이용자의 권리와 행사 방법)</h2>
       <p>이용자는 다음과 같은 권리를 행사할 수 있습니다.</p>
       <ol>
-        <li><strong>맞춤형 광고 거부:</strong> Android 기기 설정 &gt; Google &gt; 광고 &gt; "광고 맞춤설정 선택 해제"</li>
-        <li><strong>광고 식별자 초기화:</strong> Android 기기 설정 &gt; Google &gt; 광고 &gt; "광고 ID 재설정"</li>
+        <li><strong>맞춤형 광고 거부(Android):</strong> Android 기기 설정 &gt; Google &gt; 광고 &gt; "광고 맞춤설정 선택 해제"</li>
+        <li><strong>맞춤형 광고 거부(iOS):</strong> iPhone 설정 &gt; 개인정보 보호 및 보안 &gt; 추적 에서 한자마스터의 추적 허용을 끄거나, Apple 광고 설정에서 맞춤 광고를 끕니다</li>
+        <li><strong>광고 식별자 초기화:</strong> Android 기기 설정 &gt; Google &gt; 광고 &gt; "광고 ID 재설정" / iOS는 iPhone 설정 &gt; 개인정보 보호 및 보안 &gt; Apple 광고 에서 광고 식별자를 재설정합니다</li>
         <li><strong>분석 데이터 수집 거부:</strong> 앱 삭제를 통해 이후 데이터 수집을 중단할 수 있습니다</li>
+        <li><strong>Apple 로그인 연결 해제:</strong> iPhone 설정 &gt; 본인 이름 &gt; 암호 및 보안 &gt; Apple ID를 사용하는 앱에서 한자마스터를 선택해 중지할 수 있습니다</li>
         <li><strong>계정 동기화 로그인 해제:</strong> 설정 화면의 로그아웃 버튼으로 언제든 끌 수 있습니다(기기에 저장된 학습 기록은 유지됩니다)</li>
-        <li><strong>계정 및 동기화 데이터 삭제 요청:</strong> <a href="https://heyday07.github.io/hanjamaster-delete-account.html" target="_blank">계정 삭제 안내 페이지</a>의 절차를 따르거나 아래 연락처로 요청하시면 지체 없이 처리합니다</li>
+        <li><strong>앱 내 계정 삭제:</strong> 설정 화면의 "계정 삭제"를 누르면 클라우드 계정과 동기화된 데이터가 삭제되고, 구글 또는 Apple 로그인 연결도 해제됩니다</li>
+        <li><strong>계정 및 동기화 데이터 삭제 요청(이메일):</strong> <a href="https://heyday07.github.io/hanjamaster-delete-account.html" target="_blank">계정 삭제 안내 페이지</a>의 절차를 따르거나 아래 연락처로 요청하시면 지체 없이 처리합니다</li>
         <li><strong>개인정보 열람 요청:</strong> 아래 연락처로 요청하시면 지체 없이 처리합니다</li>
         <li><strong>광고 동의 선택:</strong> 유럽 경제 지역·영국·스위스 이용자는 앱에서 표시되는 동의 창을 통해 개인 맞춤 광고에 대한 동의 여부를 선택할 수 있으며, 광고 파트너(Meta Audience Network 포함)는 이 선택에 따라 광고를 제공합니다</li>
       </ol>
@@ -333,7 +357,7 @@
     <!-- ==================== English Version ==================== -->
     <div id="section-en" class="section-en">
       <h1>Privacy Policy</h1>
-      <p class="subtitle">HanjaMaster | Effective Date: March 25, 2026 | Last Updated: September 20, 2026 | Version 1.2</p>
+      <p class="subtitle">HanjaMaster | Effective Date: March 25, 2026 | Last Updated: October 4, 2026 | Version 1.3 (iOS items added)</p>
 
       <div class="highlight">
         <strong>Notice of change (announced September 20, 2026):</strong> To improve ad revenue, we have added <strong>Meta Audience Network</strong> as an ad partner through AdMob mediation. Sections 1, 2, 3, and 5 have been updated accordingly. Under Section 8, these changes take effect 7 days after this notice, on <strong>September 27, 2026</strong>.
@@ -363,6 +387,16 @@
             <td>Google AdMob</td>
           </tr>
           <tr>
+            <td>Identifier for Advertising (IDFA, used only if you allow tracking on iOS)</td>
+            <td>Personalized advertising</td>
+            <td>Google AdMob</td>
+          </tr>
+          <tr>
+            <td>In-app purchase history (product, purchase date, transaction ID)</td>
+            <td>Delivering your access pass and confirming purchases</td>
+            <td>Apple (App Store) / Google Play</td>
+          </tr>
+          <tr>
             <td>Advertising ID (AAID), IP address, device info, ad interaction data</td>
             <td>Ad serving and measurement (via AdMob mediation)</td>
             <td>Meta Audience Network (Meta Platforms)</td>
@@ -386,7 +420,7 @@
       </table>
 
       <h3>Optional Account Sync (Google Sign-In)</h3>
-      <p>From the Settings screen, you may optionally <strong>sign in with your Google account</strong> to sync study progress and app settings across your devices. <strong>If you don't sign in, this section does not apply</strong> — the app stores data on this device only, with no account.</p>
+      <p>From the Settings screen, you may optionally <strong>sign in with your Google or Apple account</strong> to sync study progress and app settings across your devices. <strong>If you don't sign in, this section does not apply</strong> — the app stores data on this device only, with no account.</p>
       <table>
         <thead>
           <tr>
@@ -400,6 +434,11 @@
             <td>Email address, Google account identifier (UID)</td>
             <td>Identify your account and link data across devices</td>
             <td>Google Firebase Authentication</td>
+          </tr>
+          <tr>
+            <td>Apple sign-in email address (an Apple relay address if you use Hide My Email), Apple user identifier</td>
+            <td>Identify your account and link data across devices</td>
+            <td>Google Firebase Authentication (Apple sign-in integration)</td>
           </tr>
           <tr>
             <td>Study progress (flashcard status, favorites, puzzle records, daily study summaries)</td>
@@ -475,6 +514,12 @@
             <td><a href="https://firebase.google.com/support/privacy" target="_blank">Link</a></td>
           </tr>
           <tr>
+            <td>Apple (App Store in-app purchases, Apple sign-in)</td>
+            <td>Apple Inc.</td>
+            <td>Processing access pass purchases; optional Apple sign-in</td>
+            <td><a href="https://www.apple.com/legal/privacy/" target="_blank">Link</a></td>
+          </tr>
+          <tr>
             <td>Firebase Firestore</td>
             <td>Google LLC</td>
             <td>Optional progress/settings sync</td>
@@ -494,11 +539,14 @@
 
       <h2>5. Your Rights</h2>
       <ol>
-        <li><strong>Opt out of personalized ads:</strong> Device Settings &gt; Google &gt; Ads &gt; "Opt out of Ads Personalization"</li>
-        <li><strong>Reset Advertising ID:</strong> Device Settings &gt; Google &gt; Ads &gt; "Reset advertising ID"</li>
+        <li><strong>Opt out of personalized ads (Android):</strong> Device Settings &gt; Google &gt; Ads &gt; "Opt out of Ads Personalization"</li>
+        <li><strong>Opt out of personalized ads (iOS):</strong> iPhone Settings &gt; Privacy &amp; Security &gt; Tracking, turn off tracking for HanjaMaster, or turn off personalized ads in Apple Advertising settings</li>
+        <li><strong>Reset Advertising ID:</strong> Android: Device Settings &gt; Google &gt; Ads &gt; "Reset advertising ID" / iOS: iPhone Settings &gt; Privacy &amp; Security &gt; Apple Advertising to reset your advertising identifier</li>
+        <li><strong>Revoke Apple sign-in:</strong> iPhone Settings &gt; [your name] &gt; Password &amp; Security &gt; Apple ID logins, then select HanjaMaster to stop using your Apple ID with the app</li>
         <li><strong>Stop data collection:</strong> Uninstalling the app will stop all future data collection</li>
         <li><strong>Turn off account sync:</strong> Sign out anytime from the Settings screen (data already on your device is kept)</li>
-        <li><strong>Request account or data deletion:</strong> Follow the steps on our <a href="https://heyday07.github.io/hanjamaster-delete-account.html" target="_blank">account deletion page</a>, or contact us at the email below</li>
+        <li><strong>Delete your account in the app:</strong> Use the "Delete account" option on the Settings screen. This deletes your cloud account and synced data, and unlinks the Google or Apple sign-in</li>
+        <li><strong>Request account or data deletion by email:</strong> Follow the steps on our <a href="https://heyday07.github.io/hanjamaster-delete-account.html" target="_blank">account deletion page</a>, or contact us at the email below</li>
         <li><strong>Data access requests:</strong> Contact us at the email below</li>
         <li><strong>Ad consent choices:</strong> Users in the European Economic Area, the United Kingdom, and Switzerland can choose whether to consent to personalized ads in the consent dialog shown in the app. Ad partners, including Meta Audience Network, serve ads according to this choice</li>
       </ol>
